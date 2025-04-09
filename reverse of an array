@@ -1,0 +1,31 @@
+#include<iostream>
+using namespace std;
+void print(int arr[],int n){
+    for (int i = 0; i < n; i++)
+    {
+    cout<<arr[i]<<" ";
+    }
+    
+}
+int main(){
+    int n;
+    cout<<"enter the number of elements u want in ur array: "<<endl;
+    cin>>n;
+    int arr[n];
+    cout<<"enter the elements in your array: ";
+    for (int i = 0; i < n; i++)
+    {
+    cin>>arr[i];
+    }
+    print(arr,n);
+    int st=0;
+    int end=n-1;
+    while(st<=end){
+        swap(arr[st],arr[end]);//reverse array logic
+        st++;
+        end--;
+    }
+    cout<<"reversed array is : "<<endl;
+    print(arr,n);
+    return 0;
+}
